@@ -30,12 +30,13 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------    
 
-
 mkdir c:\meshcentral
 cd c:\meshcentral
 
 echo Downloading NodeJS
-powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://nodejs.org/dist/v10.15.3/node-v10.15.3-x64.msi', 'node-v10.15.3-x64.msi')"
+powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://nodejs.org/dist/v10.15.3/node-v10.15.3-x64.msi', 'node-v10.15.3-
+
+x64.msi')"
 
 echo Installing NodeJS
 msiexec.exe /i node-v10.15.3-x64.msi /qn /l* node-install-log.txt
@@ -46,10 +47,13 @@ echo Using NPM to install Requirements and MeshCentral
 call npm install @davedoesdev/fido2-lib
 call npm install meshcentral
 
-
 echo.
-echo Install Finished
 echo.
+echo ################################
+echo.
+echo 	     Install Finished
+echo.
+echo ################################
 
 echo.
 echo To Run:
