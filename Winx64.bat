@@ -44,7 +44,6 @@ msiexec.exe /i node-v10.15.3-x64.msi /qn /l* node-install-log.txt
 call "C:\Program Files\nodejs\nodevars.bat"
 
 echo Using NPM to install Requirements and MeshCentral
-call npm install @davedoesdev/fido2-lib
 call npm install meshcentral
 
 echo.
